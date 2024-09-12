@@ -1,1 +1,12 @@
+
+## Docker Container Create
+
 docker build --tag py-django .
+docker run --publish 8000:8000 py-django
+
+
+#Remove all Docker Images
+
+docker kill $(docker ps -q)
+
+docker rmi -f $(docker images -a -q)
